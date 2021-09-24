@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+
 body {
   margin: 0;
 }
 
+
+
 header {
+  font-family: 'IBM Plex Mono',sans-serif;
   display: flex;
   justify-content: space-between;
   background-color:aqua

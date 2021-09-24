@@ -1,5 +1,5 @@
 import React from "react";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
         <Link to="/shop">Shop</Link>
       </div>
       <div>
-        <Link to="/cart">Cart</Link>
+        <Link to="/cart">cart</Link>
       </div>
     </header>
   );

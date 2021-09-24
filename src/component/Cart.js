@@ -9,14 +9,18 @@ export default function Cart(props) {
       <Header />
       {cartItems.length === 0 && <div>Cart Empty</div>}
 
-      {cartItems.map((item) => (
-        <div key={item.id}>
-          <span>{item.name}</span>
-          <button onClick={() => onRemove(item)}>-</button>
-          <span>{item.qty}</span>
-          <button onClick={() => onAdd(item)}>+</button>
-        </div>
-      ))}
+      <div>
+        {cartItems.map((item) => (
+          <div key={item.id}>
+            <span>{item.name}</span>
+            <div>
+              <button onClick={() => onRemove(item)}>-</button>
+              <span>{item.qty}</span>
+              <button onClick={() => onAdd(item)}>+</button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
