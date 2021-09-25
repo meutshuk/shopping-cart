@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 
 html {
-  background-color: beige;
+  background-color: rgba(88, 161, 161, 0.793);
 
   body {
     margin: 0;
@@ -11,15 +11,27 @@ html {
       font-family: "IBM Plex Mono", sans-serif;
       display: flex;
       justify-content: space-between;
-      background-color: aqua;
-      height: 2rem;
-      position: fixed;
+      background-color: rgb(143, 233, 233);
+
+      height: 3rem;
+      // position: fixed;
       width: 100%;
       z-index: 100;
 
       .logo {
         font-family: "Dancing Script", sans-serif;
         font-size: 2.5rem;
+        padding-left: 1rem;
+        color: #ff4500;
+      }
+
+      div {
+        a {
+          padding: 1rem;
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: rgb(255, 0, 0);
+        }
       }
     }
 
@@ -30,9 +42,10 @@ html {
       grid-gap: 0.5rem;
       max-width: max-content;
       margin: auto;
-      padding: 3rem;
+      padding: 2rem;
 
       .product-tab {
+        background-color: rgba(171, 212, 243, 0.607);
         border-radius: 0.5rem;
         border: 0rem solid;
         padding: 0.5rem;
@@ -55,19 +68,61 @@ html {
     }
 
     .cart-checkout {
+      background-color: rgba(171, 212, 243, 0.897);
       position: absolute;
-      top: 30%;
-      width: 20rem;
-      border: 1px solid;
-      left: 45%;
-    }
+      top: 10%;
+      width: 30rem;
+      left: 35%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-    .cart-item div {
-      display: flex;
+      button {
+        a {
+          text-decoration: none;
+        }
+      }
 
-      #checkout-color {
-        height: 1.5rem;
-        width: 1.5rem;
+      .cart-header {
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem;
+        font-size: 2rem;
+      }
+
+      .cart-item {
+        margin: 0.5rem 1rem;
+        border-bottom: 3px dotted;
+        padding-bottom: 1rem;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          #checkout-color {
+            height: 1.5rem;
+            width: 1.5rem;
+            border: 0.2rem solid black;
+            border-radius: 0.5rem;
+          }
+
+          #item-name {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          div {
+            button {
+              margin: 1rem;
+            }
+          }
+        }
+      }
+      .total {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0.5rem 1rem 0.5rem 0;
       }
     }
   }
@@ -128,4 +183,48 @@ h6 {
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
+}
+
+/* CSS */
+.button-66 {
+  margin: 1rem auto;
+
+  background-color: #0a6bff;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: rgba(1, 60, 136, 0.5) 0 -1px 3px 0 inset,
+    rgba(0, 44, 97, 0.1) 0 3px 6px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inherit;
+  font-family: "Space Grotesk", -apple-system, system-ui, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  // margin: 0;
+  min-height: 56px;
+  min-width: 120px;
+  padding: 16px 20px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.button-66:hover {
+  background-color: #065dd8;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-66 {
+    padding: 16px 44px;
+    min-width: 150px;
+  }
 }

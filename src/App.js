@@ -12,6 +12,11 @@ function App() {
 
   const { product } = data;
 
+  let cartItemTotal = 0;
+  cartItems.forEach((item) => {
+    cartItemTotal += item.qty;
+  });
+
   const onRemove = (product) => {
     const exist = cartItems.find((item) => item.id === product.id);
 
@@ -46,13 +51,18 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Main Cart={cartItems} />
+          <Main cartItemTotal={cartItemTotal} />
         </Route>
         <Route
           exact
           path="/shop"
           render={(props) => (
-            <Shop {...props} product={product} onClick={onClick} />
+            <Shop
+              {...props}
+              product={product}
+              onClick={onClick}
+              cartItemTotal={cartItemTotal}
+            />
           )}
         />
 
@@ -60,7 +70,13 @@ function App() {
           exact
           path="/cart"
           render={(props) => (
-            <Cart {...props} cartItems={cartItems} onRemove={onRemove} onAdd={onClick} />
+            <Cart
+              {...props}
+              cartItemTotal={cartItemTotal}
+              cartItems={cartItems}
+              onRemove={onRemove}
+              onAdd={onClick}
+            />
           )}
         />
       </Switch>

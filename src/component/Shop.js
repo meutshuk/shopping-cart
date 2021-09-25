@@ -3,12 +3,12 @@ import Header from "./Header";
 import ProductItem from "./ProductItem";
 
 export default function Shop(props) {
-  const { product,onClick } = props;
+  const { product, onClick, cartItemTotal } = props;
 
   return (
     <div>
-      <Header />
-      <div className='item-container'>
+      <Header cartItemTotal={cartItemTotal} />
+      <div className="item-container">
         {product.map((product) => (
           <ProductItem key={product.id} product={product} onClick={onClick} />
         ))}
