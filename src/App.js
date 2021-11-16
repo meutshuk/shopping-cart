@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/shopping-cart">
       <Switch>
         <Route exact path="/">
           <Main cartItemTotal={cartItemTotal} />
